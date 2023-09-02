@@ -75,7 +75,6 @@ public class Main {
         System.out.println("Kahve listesini görmek için liste yazınız.");
         System.out.println("Direkt sipariş vermek isterseniz kahve numarasını giriniz: ");
         System.out.println("Çıkmak için q ya basınız.");
-        order = input.next();
         while(!validInput){
 	        order = input.next();
 	        switch(order){
@@ -94,6 +93,7 @@ public class Main {
         				int number = Integer.parseInt(order);
         				if(number >= 1 && number <= 7){
         					System.out.println("Teşekkürler kahveniz hazırlanıyor");
+						coffeeList.printIndex(number);
         					validInput = true;
         					}
         				else{
