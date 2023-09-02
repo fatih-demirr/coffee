@@ -75,44 +75,38 @@ public class Main {
         System.out.println("Direkt sipariş vermek isterseniz kahve numarasını giriniz: ");
         System.out.println("Çıkmak için q ya basınız.");
         order = input.next();
-        if(order.equals("q")){
-            System.out.println("güle güle");
-        } else if (order.equals("liste")) {
-            coffeeList.print();
-            System.out.println("sadece belirtilen kahve numaralarını giriniz!");
-            System.out.println("Lütfen içmek istediğiniz kahvenin numarasını giriniz: ");
-            order = input.next();
-            if(order.equals("q")){
-                System.out.println("güle güle");
-            } else if (isNum(order) == true) {
-                int number = Integer.parseInt(order);
-                System.out.println("Teşekkürler kahveniz hazırlanıyor");
-                if(number >= 1 && number <= 7){
-                    coffeeList.printIndex(number);
-                }
-                else{
-                    System.out.println("güle güle");
-                }
+        while(!validInput){
+	        order = input.next();
+	        swithc(order){
+		        case "q":
+			        System.out.println("Çıkılıyor, güle güle!");
+			        validInput = true;
+			        break;
+		        case "liste":
+        			coffeeList.print();
+        			System.out.println("sadece belirtilen kahve numaralarını giriniz!");
+        			System.out.println("Lütfen içmek istediğiniz kahvenin numarasını giriniz: ");
+        			validInput = false;
+        			break;
+        		default:
+        			if(isNum(order)){
+        				int number = Integer.parseInt(order);
+        				if(number >= 1 && number <= 7){
+        					System.out.println("Teşekkürler kahveniz hazırlanıyor");
+        					validInput = true;
+        					}
+        				else{
+        					System.out.println("Lütfen 1 - 7 arasında bir rakam giriniz:");
+        					}
+        				}
+        			else{
+        				System.out.println("Geçersiz kahve numarası tekrar giriniz!!!");
+        				}
+        			break;
             }
-            else{
-                System.out.println("güle güle");
-            }
-        } else if (isNum(order) == true) {
-            int number = Integer.parseInt(order);
-            if(number >= 1 && number <= 7){
-                coffeeList.printIndex(number);
-            }
-            else{
-                System.out.println("güle güle");
-            }
-        }
-        else {
-            System.out.println("güle güle");
         }
         input.close();
-
     }
-
     public static boolean isNum(String num){
         try{
             Integer.parseInt(num);
