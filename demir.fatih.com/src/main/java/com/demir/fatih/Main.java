@@ -1,12 +1,10 @@
-package com.apress.bgn.zero;
+package com.demir.fatih;
 
-import com.apress.bgn.zero.coffee.CoffeeList;
-import com.apress.bgn.zero.coffee.Coffee;
-import com.apress.bgn.zero.coffee.Ingredient;
+import com.demir.fatih.coffee.CoffeeList;
+import com.demir.fatih.coffee.Coffee;
+import com.demir.fatih.coffee.Ingredient;
 
-import java.sql.SQLOutput;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class Main {
