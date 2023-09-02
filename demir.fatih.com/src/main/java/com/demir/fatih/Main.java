@@ -14,7 +14,7 @@ public class Main {
         String order;
 
         ArrayList<Ingredient> ingredients1 = new ArrayList<>();
-        Ingredient ingredient1_1 = new Ingredient("Espresso", 2);
+        Ingredient ingredient1_1 = new Ingredient("Espresso", 1);
         ingredients1.add(ingredient1_1);
         Coffee coffee1 = new Coffee(1, "Espresso", 20, ingredients1);
         coffeeList.add(coffee1);

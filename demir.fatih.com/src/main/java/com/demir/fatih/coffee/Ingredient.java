@@ -12,6 +12,14 @@ public class Ingredient {
         this.ingredientNumber = ingredientNumber;
     }
 
+    public String getIngredientName() {
+        return ingredientName;
+    }
+
+    public Integer getIngredientNumber() {
+        return ingredientNumber;
+    }
+
     @Override
     public String toString() {
         return ingredientNumber + " doz " + ingredientName;

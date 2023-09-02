@@ -8,6 +8,10 @@ public class CoffeeList {
     public CoffeeList() {
     }
 
+    public ArrayList<Coffee> getCoffeeList() {
+        return coffeeList;
+    }
+
     @Override
     public String toString() {
         return "CoffeeList{" +
