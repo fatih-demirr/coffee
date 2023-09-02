@@ -12,6 +12,7 @@ public class Main {
         CoffeeList coffeeList = new CoffeeList();
         Scanner input = new Scanner(System.in);
         String order;
+	Boolean validİnput = false;
 
         ArrayList<Ingredient> ingredients1 = new ArrayList<>();
         Ingredient ingredient1_1 = new Ingredient("Espresso", 1);
@@ -77,7 +78,7 @@ public class Main {
         order = input.next();
         while(!validInput){
 	        order = input.next();
-	        swithc(order){
+	        switch(order){
 		        case "q":
 			        System.out.println("Çıkılıyor, güle güle!");
 			        validInput = true;
