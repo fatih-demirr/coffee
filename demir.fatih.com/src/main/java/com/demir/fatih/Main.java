@@ -75,6 +75,13 @@ public class Main {
         System.out.println("Kahve listesini görmek için liste yazınız.");
         System.out.println("Direkt sipariş vermek isterseniz kahve numarasını giriniz: ");
         System.out.println("Çıkmak için q ya basınız.");
+	/*
+	Kullanıcıdan input alırken, onu doğru input girmesi için sürekli while döngüsü içerisinde bıraktım. 
+ 	Bunu yapma amacım çıkmak için belirli bir input olması kullanıcının girebileceği kazara ya da kasten
+  	farklı inputlarını doğru bir şekilde karşılamak. Eğer yanlış farklı bir amaçta bir input girdiğinde 
+   	bunun uygun bir input olmadığını belirterek tekrar input girmesi için uygulamamız tekrar doğru input
+    	isteyecek yani bir nevi kullanıcıyı doğru input girmeye zorlayacağım.
+	    */
         while(!validInput){
 	        order = input.next();
 	        switch(order){
@@ -105,7 +112,7 @@ public class Main {
         				}
         			break;
             }
-        }
+        } 
         input.close();
     }
     public static boolean isNum(String num){
