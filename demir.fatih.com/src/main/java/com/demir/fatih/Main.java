@@ -109,6 +109,7 @@ public class Main {
         else {
             System.out.println("güle güle");
         }
+        input.close();
 
     }
 
