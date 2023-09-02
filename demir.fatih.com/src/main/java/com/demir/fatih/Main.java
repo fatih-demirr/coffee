@@ -12,7 +12,7 @@ public class Main {
         CoffeeList coffeeList = new CoffeeList();
         Scanner input = new Scanner(System.in);
         String order;
-	Boolean validİnput = false;
+	Boolean validInput = false;
 
         ArrayList<Ingredient> ingredients1 = new ArrayList<>();
         Ingredient ingredient1_1 = new Ingredient("Espresso", 1);
